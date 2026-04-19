@@ -1,0 +1,42 @@
+Error parsing config toml. This is most likely due to a syntax error in the config.toml file. Please fix it and try again.
+Traceback (most recent call last):
+  File "/mnt/d/OneDrive/Projects/Open_Code/retirement_dashboard/.venv/lib/python3.12/site-packages/streamlit/config.py", line 2608, in _update_config_with_toml
+    parsed_config_file = toml.loads(raw_toml)
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/OneDrive/Projects/Open_Code/retirement_dashboard/.venv/lib/python3.12/site-packages/toml/decoder.py", line 433, in loads
+    raise TomlDecodeError("Key group not on a line by itself.",
+toml.decoder.TomlDecodeError: Key group not on a line by itself. (line 1 column 1 char 0)
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.153.87:8501
+  External URL: http://75.27.148.247:8501
+
+  Stopping...
+  Stopping...
+Exception ignored in: <module 'threading' from '/usr/lib/python3.12/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1592, in _shutdown
+    atexit_call()
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.12/threading.py", line 1147, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.12/threading.py", line 1167, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/OneDrive/Projects/Open_Code/retirement_dashboard/.venv/lib/python3.12/site-packages/streamlit/web/bootstrap.py", line 43, in signal_handler
+    server.stop()
+  File "/mnt/d/OneDrive/Projects/Open_Code/retirement_dashboard/.venv/lib/python3.12/site-packages/streamlit/web/server/server.py", line 550, in stop
+    self._runtime.stop()
+  File "/mnt/d/OneDrive/Projects/Open_Code/retirement_dashboard/.venv/lib/python3.12/site-packages/streamlit/runtime/runtime.py", line 351, in stop
+    async_objs.eventloop.call_soon_threadsafe(stop_on_eventloop)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 840, in call_soon_threadsafe
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
